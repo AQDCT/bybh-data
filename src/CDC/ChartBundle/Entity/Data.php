@@ -43,9 +43,13 @@ class Data
     private $year;
 
     /**
-     * @var integer
+     * Many-To-One
      *
-     * @ORM\Column(name="question", type="integer")
+     * @var Question $question
+     *
+     * @ORM\ManyToOne(targetEntity="Question")
+     * @ORM\JoinColumn(name="question", referencedColumnName="id")
+     * 
      */
     private $question;
 

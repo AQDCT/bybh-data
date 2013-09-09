@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}CDCChartBundle:Study:getAllStudies{% endblock %}
+
+{% block body %}
+<h1>All studies</h1>
+
+{% for item in studies %}
+  {{ item.name }}
+{% endfor %}
+{% endblock %}

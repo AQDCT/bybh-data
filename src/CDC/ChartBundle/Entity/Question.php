@@ -36,9 +36,13 @@ class Question
     private $description;
 
     /**
-     * @var integer
+     * Many-To-One
      *
-     * @ORM\Column(name="category", type="integer")
+     * @var Category $category
+     *
+     * @ORM\ManyToOne(targetEntity="Category")
+     * @ORM\JoinColumn(name="category", referencedColumnName="id")
+     * 
      */
     private $category;
 
@@ -75,6 +79,9 @@ class Question
     {
         return $this->name;
     }
+
+    public function __toString() { return $this->getName(); }
+
 
     /**
      * Set description
