@@ -1,0 +1,5 @@
+cdc_chart:
+    resource: "@CDCChartBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
