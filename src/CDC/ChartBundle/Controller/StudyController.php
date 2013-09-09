@@ -35,21 +35,34 @@ class StudyController extends Controller
     /**
      * Display one study
      *
-     * @Route("/study/{id}", name="singlestudy")
+     * @Route("/study/{name}", name="singlestudy")
      * @Method("GET")
      * @Template()
      */
-    public function getSingleStudyAction($id)
+    public function getSingleStudyAction($name)
     {
         $em = $this->getDoctrine()->getManager();
+        $study = $em->getRepository('CDCChartBundle:Study')->findOneByName($name);
+        $thisStudy = $study->getId();
 
-        $thisStudy = $em->getRepository('CDCChartBundle:Study')->findOneById($id);
+        // GET QUESTIONS
+        $qb = $em->createQueryBuilder();
+        $qb->select(array('q', 'c'));
+        $qb->from('CDCChartBundle:Question','q')
+            ->leftJoin('q.category', 'c', 'WITH', 'q.category = c.id')
+            ->where("c.study = :study")
+            ->setParameter('study', $thisStudy);
+        
+
+        $questions = $qb->getQuery()->getResult();
+
+
        
-        if (!$thisStudy) {
+        if (!$study) {
             throw $this->createNotFoundException('Unable to find Study entity.');
         }
    
-        return $this->render('CDCChartBundle:Study:study.html.twig', array('study' => $thisStudy));
+        return $this->render('CDCChartBundle:Study:study.html.twig', array('study' => $study, 'questions' => $questions));
     }
 
 }

@@ -2,10 +2,11 @@
 
 {% block title %}CDCChartBundle:Study:getAllStudies{% endblock %}
 
-{% block body %}
+{% block content %}
 <h1>All studies</h1>
-
+<ul>
 {% for item in studies %}
-  {{ item.name }}
+  <li><a href='{{ path('singlestudy', {'name': item.name}) }}'>{{ item.name }}</a></li>
 {% endfor %}
+</ul>
 {% endblock %}
