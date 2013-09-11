@@ -19,10 +19,10 @@
         <div class='span15 offset1'>{% block header %}{% endblock %}</div>
     </div>
     <div class-'row'>
-        <script src="{{ asset('js/chart.min.js') }}"></script>
+        <div class='span4 offset1'>{% block sidebar %}{% endblock %}</div>
 
-        <div class='span3 offset1'>{% block sidebar %}{% endblock %}</div>
-        <div class='span12'>{% block content %}{% endblock %}</div>
+        <div class='span11'>{% block content %}{% endblock %}</div>
+
     </div>
 
     </body>

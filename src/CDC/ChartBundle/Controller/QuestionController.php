@@ -133,9 +133,9 @@ class QuestionController extends Controller
 
         $form = $this->createFormBuilder()
             ->add('USA', 'checkbox', array('label' => 'USA', 'attr' => array('class' => $USAcheck)))
-            ->add('Chicago', 'checkbox', array('label' => 'Chicago', 'attr' => array('class' => $Chicagocheck)))
             ->add('Illinois', 'checkbox', array('label' => 'Illinois', 'attr' => array('class' => $Illinoischeck)))
-            ->add('New_York_City', 'checkbox', array('label' => 'New York City', 'attr' => array('class' => $NYCcheck)))
+            ->add('Chicago', 'checkbox', array('label' => 'Chicago', 'attr' => array('class' => $Chicagocheck)))
+            ->add('New_York_City', 'checkbox', array('label' => 'NYC', 'attr' => array('class' => $NYCcheck)))
             ->getForm();
 
         if (!$thisQuestion) {
