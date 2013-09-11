@@ -19,7 +19,7 @@ class QuestionController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function getSingleQuestionAction($id, $g1='USA', $g2='Chicago', $g3=NULL, $g4=NULL)
+    public function getSingleQuestionAction($id, $g1='USA', $g2=NULL, $g3=NULL, $g4=NULL)
     {
         $em = $this->getDoctrine()->getManager();
         $thisQuestion = $em->getRepository('CDCChartBundle:Question')->findOneById($id);
@@ -44,26 +44,35 @@ class QuestionController extends Controller
 
         // Add two (2) minimum for display
         $checkboxes = array();
-        array_push($checkboxes, $g2);
         array_push($checkboxes, $g1);
-        $selections = "/".$g1."/".$g2;
+        $selections = "/".$g1;
 
         $g4data = '';
         $g4row = '';   
         $g3data = '';
         $g3row = '';
+        $g2data = '';
+        $g2row = '';
 
-        if(is_null($g3)){
+        if(is_null($g2)){
+            $geos = 1;
+        }
+        elseif(is_null($g3)){
               $geos = 2;
+              $selections .= "/".$g2;
+              array_push($checkboxes, $g2);
         }
         elseif(is_null($g4)){
               $geos = 3;
               $selections .= "/".$g3;
+              array_push($checkboxes, $g2);
               array_push($checkboxes, $g3);
         }
         else{
               $geos = 4;
               $selections .= "/".$g3."/".$g4;
+              array_push($checkboxes, $g2);
+              array_push($checkboxes, $g3);
               array_push($checkboxes, $g4);
         }
 

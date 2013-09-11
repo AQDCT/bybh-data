@@ -45,6 +45,7 @@ $(document).ready(function() {
 <h1><a href='{{ path('singlestudy', {'name': question.category.study.name }) }}'>{{ question.category.study.name }}</a></h1>
 <h2>{{ question.name }}</h2><p class='lead'>{{ question.description }}
 <h4>Geographies</h4>
+<em>Click the checkboxes to display that geography</em>
 {{ form(form, {'attr': {'class': 'form-inline'}}) }}
 <a href='' id='update_me'><button class="btn btn-primary" type="button">Update</button></a>
 {% endblock %}
