@@ -5,7 +5,7 @@
         <title>{% block title %}{% endblock %} | Health Research - BeYouBeHealthy.org</title>
         {% block stylesheets %}
         <link href="{{ asset('bundles/jordillonchcrudgenerator/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('bundles/cdcchart/css/app.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -19,7 +19,7 @@
         <div class='span15 offset1'>{% block header %}{% endblock %}</div>
     </div>
     <div class-'row'>
-        <script src="{{ asset('bundles/cdcchart/js/chart.min.js') }}"></script>
+        <script src="{{ asset('js/chart.min.js') }}"></script>
 
         <div class='span3 offset1'>{% block sidebar %}{% endblock %}</div>
         <div class='span12'>{% block content %}{% endblock %}</div>
