@@ -1,23 +1,14 @@
 {% extends "::base.html.twig" %}
-
-{% block title %}CDCChartBundle:Study:get{% endblock %}
+{% block title %}{{ study.name }}{% endblock %}
+{% block header %} 
+<h1>{{ study.name }}</h1>
+{{ include ('CDCChartBundle:Default:button-menu.html.twig') }}
+{% endblock %}
 
 {% block content %}
-<h1>Welcome to the {{ study.name }} page</h1>
 
-<h2>Question categories</h2>
+This is Study content.
 
-<h4>Unintentional Injuries and Violence</h4>
-<ul>
-{% set currentCategory = 1 %}
 
-{% for item in questions %}
-{% if currentCategory != item.category.id %}
-</ul><h4>{{ item.category }}</h4><ul>
-{% set currentCategory = item.category.id %}
-  {% endif %}
-  <li>{{ item.name }}</li>
-
-{% endfor %}
-</ul>
 {% endblock %}
+

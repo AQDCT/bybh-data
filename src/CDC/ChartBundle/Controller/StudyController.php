@@ -7,7 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-use CDC\CDCChartBundle\Entity\School;
+use CDC\CDCChartBundle\Entity\Study;
 
 
 class StudyController extends Controller
@@ -53,16 +53,16 @@ class StudyController extends Controller
             ->where("c.study = :study")
             ->setParameter('study', $thisStudy);
         
-
         $questions = $qb->getQuery()->getResult();
 
-
+        // Default geographies for initial display
+        $selections = '/USA/Chicago';
        
         if (!$study) {
             throw $this->createNotFoundException('Unable to find Study entity.');
         }
    
-        return $this->render('CDCChartBundle:Study:study.html.twig', array('study' => $study, 'questions' => $questions));
+        return $this->render('CDCChartBundle:Study:study.html.twig', array('study' => $study, 'questions' => $questions, 'selections' => $selections));
     }
 
 }

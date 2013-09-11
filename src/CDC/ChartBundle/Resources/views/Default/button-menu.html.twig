@@ -1,0 +1,21 @@
+<h2>Question categories</h2>
+<div class="btn-group"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+Unintentional Injuries and Violence
+<span class="caret"></span></a>
+
+<ul class="dropdown-menu">
+{% set currentCategory = 1 %}
+
+{% for item in questions %}
+      {% if currentCategory != item.category.id %}
+            </ul></div>
+            <div class="btn-group"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            {{ item.category }}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            {% set currentCategory = item.category.id %}
+      {% endif %}
+  <li><a href='{{ path('singlequestion', {'id': item.id })}}{{selections}}'>{{ item.name }}</a></li>
+{% endfor %}
+
+</ul></div>
+<hr>

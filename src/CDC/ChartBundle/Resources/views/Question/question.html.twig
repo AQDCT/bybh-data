@@ -1,0 +1,77 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}{{ question.category.study.name }} - {{ question.name }}{% endblock %}
+
+{% block header %} 
+<script>
+$(document).ready(function() {
+
+    $('.checked').attr('checked', 'checked');
+
+    $('#update_me').click(function(){
+        var route = '';
+        if($('#form_USA').is(':checked')){
+            route += '/USA';
+        }
+        if($('#form_Illinois').is(':checked')){
+            route += '/Illinois';
+        }
+        if($('#form_Chicago').is(':checked')){
+            route += '/Chicago';
+        }
+        if($('#form_New_York_City').is(':checked')){
+            route += '/New York City';
+        }
+        $("#update_me").attr("href", "{{ path('singlequestion', {'id': question.id}) }}" + route );
+    });
+  
+});
+</script>
+<h1><a href='{{ path('singlestudy', {'name': question.category.study.name }) }}'>{{ question.category.study.name }}</a></h1>
+{{ include ('CDCChartBundle:Default:button-menu.html.twig', {'selections': selections}) }}
+
+{% endblock %}
+
+{% block sidebar %}
+<legend>{{ question.name }}</legend><p>{{ question.description }}
+{{ form(form, {'attr': {'class': 'form-inline'}}) }}
+<a href='' id='update_me'>Update</a>
+{% endblock %}
+
+{% block content %}
+
+{% form_theme form _self %}
+
+{% block checkbox_widget %}
+    <div class="checkbox_widget">
+        <div class='checkbox inline' style='margin-right: 9px'>{{form_label(form)}}</div>
+        {{form_widget(form)}}
+    </div>
+{% endblock %}
+
+<canvas id="canvas" height="400" width="800px"></canvas>
+
+<script>
+  var barOptions = {
+        
+    scaleOverride : true,
+    scaleSteps : 5,
+    scaleStepWidth : {{ step }},
+    scaleStartValue : {{ min }},
+    scaleShowLabels : true,
+
+  }
+
+  var barChartData = {
+      labels : ["1993","1995","1997","1999","2001","2003","2005","2007","2009","2011"],
+      {{ dataset | raw }}
+    }
+
+  var myBar = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData, barOptions);
+  
+</script>
+<legend>Table Data</legend>
+<table class='table table-hover' style='width: 800px;'><tr><th></th><th>1993</th><th>1995</th><th>1997</th><th>1999</th><th>2001</th><th>2003</th><th>2005</th><th>2007</th><th>2009</th><th>2011</th></tr>
+{{ g1row | raw }} {{ g2row | raw }} {{ g3row | raw }} {{ g4row | raw }}
+</table>
+{% endblock %}
