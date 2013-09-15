@@ -55,7 +55,7 @@ class QuestionController extends Controller
         $g2row = '';
 
         if(is_null($g2)){
-            $geos = 1;
+              $geos = 1;
         }
         elseif(is_null($g3)){
               $geos = 2;
@@ -64,13 +64,13 @@ class QuestionController extends Controller
         }
         elseif(is_null($g4)){
               $geos = 3;
-              $selections .= "/".$g3;
+              $selections .= "/".$g2."/".$g3;
               array_push($checkboxes, $g2);
               array_push($checkboxes, $g3);
         }
         else{
               $geos = 4;
-              $selections .= "/".$g3."/".$g4;
+              $selections .= "/".$g2."/".$g3."/".$g4;
               array_push($checkboxes, $g2);
               array_push($checkboxes, $g3);
               array_push($checkboxes, $g4);
