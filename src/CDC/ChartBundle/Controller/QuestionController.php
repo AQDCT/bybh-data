@@ -79,9 +79,29 @@ class QuestionController extends Controller
         // Build datasets
         $dataset = 'datasets : [';
 
-        $barcolors = array('000', '3C8802', '01693F', '9A2F02', '8A0229');
 
         while ($geos >= 1) {
+
+            if(${'g'.$geos}=='Chicago'){
+              $fillColor = "rgba(145, 217, 248, .8)";
+              $color = "B3DDF2";
+              $strokeColor = "rgba(145, 217, 248, 1)";
+            }
+            elseif(${'g'.$geos}=='USA'){
+              $fillColor = "rgba(255, 232, 170, .5)";
+              $color = "ffe8aa";
+              $strokeColor = "rgba(255, 232, 170, 1)";
+            }
+            elseif(${'g'.$geos}=='Illinois'){
+              $fillColor = "rgba(184, 217, 174, .5)";
+              $color = "b8d9ae";
+              $strokeColor = "rgba(184, 217, 174, 1)";
+            }
+            if(${'g'.$geos}=='New York City'){
+              $fillColor = "rgba(255, 102, 0, .5)";
+              $color = "ff6600";
+              $strokeColor = "rgba(255, 102, 0, 1)";
+            }
 
             // Get all necessary geographies
             $qb = $em->createQueryBuilder();
@@ -94,7 +114,7 @@ class QuestionController extends Controller
 
             $data = $qb->getQuery()->getResult();
             $datapoints = '';
-            ${'g'.$geos.'row'} = '<tr><td><span class="badge" style="background-color: #'.$barcolors[$geos].'">'.${'g'.$geos}.'</span></td>';
+            ${'g'.$geos.'row'} = '<tr><td><span class="badge" style="background-color: #'.$color.'">'.${'g'.$geos}.'</span></td>';
 
             foreach($data AS $item){
                   if($item->getValue() < $min && $item->getValue() != 0.00){
@@ -109,7 +129,7 @@ class QuestionController extends Controller
        
             ${'g'.$geos.'row'} .= "</tr>";
 
-            $dataset .= "{fillColor : '".$barcolors[$geos]."', strokeColor : 'rgba(220,220,220,1)', data : [".$datapoints."]},";
+            $dataset .= "{fillColor : '".$fillColor."', strokeColor : 'rgba(220,220,220,1)', data : [".$datapoints."]},";
 
             $geos--;
 

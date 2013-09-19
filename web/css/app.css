@@ -1,0 +1,19 @@
+h3{
+  color: #a8262a;
+}
+
+.btn, .btn-group > a.btn.dropdown-toggle{
+  background-color: #fbebba;
+}
+
+.btn-group.open .btn.dropdown-toggle{
+    background-color: #fbebba;
+}
+.btn-group{
+    background-color: #fbebba;
+}
+.btn-group > .btn:first-child {
+
+      background-color: #fbebba;
+
+}

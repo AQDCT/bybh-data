@@ -2,6 +2,8 @@
 
 {% form_theme form _self %}
 
+
+
 {% block form_row %}
     <div class="form_row" style='margin: 5px; float: left; clear:none;'>
         <span class='checkbox inline' style='padding:5px;'>{{ form_label(form) }}
@@ -42,8 +44,8 @@ $(document).ready(function() {
 {% endblock %}
 
 {% block sidebar %}
-<h1><a href='{{ path('singlestudy', {'name': question.category.study.name }) }}'>{{ question.category.study.name }}</a></h1>
-<h2>{{ question.name }}</h2><p class='lead'>{{ question.description }}
+<h5>{{ question.category.study.description }}</h5>
+<h3>{{ question.name }}</h3><p class='lead'>{{ question.description }}
 <h4>Geographies</h4>
 <em>Click the checkboxes to display that geography</em>
 {{ form(form, {'attr': {'class': 'form-inline'}}) }}
