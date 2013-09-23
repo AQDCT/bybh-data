@@ -4,9 +4,9 @@
 
 {% block content %}
 <h1>All studies</h1>
-<ul>
+
 {% for item in studies %}
-  <li><a href='{{ path('singlestudy', {'name': item.name}) }}'>{{ item.name }}</a></li>
+  <p><a href='{{ path('singlestudy', {'name': item.name}) }}'>{{ item.name }}</a><br/>{{item.description | raw}}</p>
 {% endfor %}
-</ul>
+
 {% endblock %}

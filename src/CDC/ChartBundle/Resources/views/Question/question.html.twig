@@ -44,7 +44,7 @@ $(document).ready(function() {
 {% endblock %}
 
 {% block sidebar %}
-<h5>{{ question.category.study.description }}</h5>
+<h5>{{ question.category.study.name }}</h5>
 <h3>{{ question.name }}</h3><p class='lead'>{{ question.description }}
 <h4>Geographies</h4>
 <em>Click the checkboxes to display that geography</em>
@@ -77,8 +77,7 @@ $(document).ready(function() {
   var myBar = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData, barOptions);
   
 </script>
-<legend>Table Data</legend>
-<table class='table table-hover' style='width: 800px;'><tr><th></th><th>1993</th><th>1995</th><th>1997</th><th>1999</th><th>2001</th><th>2003</th><th>2005</th><th>2007</th><th>2009</th><th>2011</th></tr>
+<table class='table table-hover' style='margin-left: 35px; margin-top: 15px; width: 800px;'><tr><th></th><th>1993</th><th>1995</th><th>1997</th><th>1999</th><th>2001</th><th>2003</th><th>2005</th><th>2007</th><th>2009</th><th>2011</th></tr>
 {{ g1row | raw }} {{ g2row | raw }} {{ g3row | raw }} {{ g4row | raw }}
 </table>
 {% endblock %}
