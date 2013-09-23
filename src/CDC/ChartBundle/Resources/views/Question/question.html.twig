@@ -50,6 +50,8 @@ $(document).ready(function() {
 <em>Click the checkboxes to display that geography</em>
 {{ form(form, {'attr': {'class': 'form-inline'}}) }}
 <a href='' id='update_me'><button class="btn btn-primary" type="button">Update</button></a>
+<hr/>
+<a href='{{ path('allstudies') }}'>Back to Study Home</a>
 {% endblock %}
 
 {% block content %}
