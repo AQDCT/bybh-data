@@ -114,7 +114,7 @@ class QuestionController extends Controller
 
             $data = $qb->getQuery()->getResult();
             $datapoints = '';
-            ${'g'.$geos.'row'} = '<tr><td><span class="badge" style="background-color: #'.$color.'">'.${'g'.$geos}.'</span></td>';
+            ${'g'.$geos.'row'} = '<tr><td><span class="badge" style="margin-right: 5px; background-color: #'.$color.'">&nbsp;</span>'.${'g'.$geos}.'</td>';
 
             foreach($data AS $item){
                   if($item->getValue() < $min && $item->getValue() != 0.00){
@@ -123,7 +123,9 @@ class QuestionController extends Controller
                   if($item->getValue() > $max){
                   $max = $item->getValue();
                   }
+                  if($item->getYear() > '1999'){
                   $datapoints .= $item->getValue().","; 
+                  }
                   ${'g'.$geos.'row'} .= '<td>'.$item->getValue().'</td>';
             }
        
