@@ -1,5 +1,10 @@
 h3{
   color: #a8262a;
+  line-height: 1.2em;
+}
+
+.sidebar {
+  color: #666;
 }
 
 .btn, .btn-group > a.btn.dropdown-toggle{
@@ -16,4 +21,12 @@ h3{
 
       background-color: #fbebba;
 
+}
+
+.table th, .table td {
+   text-align: center;   
+}
+
+.table td.geo-column {
+  text-align: left;
 }

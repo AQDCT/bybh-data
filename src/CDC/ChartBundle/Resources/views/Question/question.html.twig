@@ -47,9 +47,9 @@ $(document).ready(function() {
 <h5>{{ question.category.study.name }}</h5>
 <h3>{{ question.name }}</h3><p class='lead'>{{ question.description }}
 <h4>Geographies</h4>
-<em>Click the checkboxes to display that geography</em>
 {{ form(form, {'attr': {'class': 'form-inline'}}) }}
-<a href='' id='update_me'><button class="btn btn-primary" type="button">Update</button></a>
+<a href='' id='update_me'><button class="btn" type="button">Update</button></a>
+<a href='' id='print_me'><button class="btn" type="button">Print</button></a>
 <hr/>
 <a href='{{ path('allstudies') }}'>Back to Study Home</a>
 {% endblock %}
@@ -58,7 +58,7 @@ $(document).ready(function() {
 
 <script src="{{ asset('js/chart.min.js') }}"></script>
 
-<canvas id="canvas" height="400" width="870px"></canvas>
+<canvas id="canvas" height="400" width="843px"></canvas>
 
 <script>
   var barOptions = {

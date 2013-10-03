@@ -114,7 +114,7 @@ class QuestionController extends Controller
 
             $data = $qb->getQuery()->getResult();
             $datapoints = '';
-            ${'g'.$geos.'row'} = '<tr><td><span class="badge" style="margin-right: 5px; background-color: #'.$color.'">&nbsp;</span>'.${'g'.$geos}.'</td>';
+            ${'g'.$geos.'row'} = '<tr><td class="geo-column"><span class="badge" style="margin-right: 5px; background-color: #'.$color.'">&nbsp;</span>'.${'g'.$geos}.'</td>';
 
             foreach($data AS $item){
                   if($item->getValue() < $min && $item->getValue() != 0.00){
