@@ -15,5 +15,7 @@
 <link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Economica:700' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="/CDC/web/bybh/js/jquery.min.js"></script>
+<script type="text/javascript" src="/CDC/web/bybh/js/bootstrap.min.js"></script>
+
 <script src="/CDC/web/bybh/js/picturefill.js"></script>
 <script src="/CDC/web/bybh/javascripts/modernizr.foundation.js"></script>
