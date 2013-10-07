@@ -5,7 +5,7 @@
         <!-- Title Area -->
         <li>
           
-      <a href="index.php"><img src="http://beyoubehealthy.org/images/BeYouBeHealthy_logo.png" alt="Be You Be Healthy Logo">
+      <a href="index.php"><img src="/CDC/web/bybh/images/BeYouBeHealthy_logo.png" alt="Be You Be Healthy Logo">
           </a>       </li>
         
         <li class="toggle-topbar"><a href="#"></a></li>
