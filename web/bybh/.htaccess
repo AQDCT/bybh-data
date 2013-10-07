@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www\.)?lovetheglove\.org [NC]
+RewriteRule ^$ http://www.beyoubehealthy.org/love_the_glove.php [R=301,L]
