@@ -33,14 +33,8 @@ USE WITH SCROLLING PAGES -->
   <script src="/CDC/web/bybh/javascripts/jquery.foundation.mediaQueryToggle.js"></script>
   <script src="/CDC/web/bybh/javascripts/jquery.foundation.orbit.js"></script>
   <script src="/CDC/web/bybh/javascripts/jquery.foundation.accordion.js"></script>
-  
-<!-- Included JS Files (Compressed) -->
   <script src="/CDC/web/bybh/javascripts/foundation.min.js"></script>
-
-<!-- Initialize JS Plugins -->
-<script src="/CDC/web/bybh/javascripts/app.js"></script>
-
-<script type="text/javascript" src="/CDC/web/bybh/stylesheets/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="/CDC/web/bybh/stylesheets/jquery.easing.1.3.js"></script>
 
  <script type="text/javascript">
             $(function() {
