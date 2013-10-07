@@ -45,8 +45,8 @@ $(document).ready(function() {
 
 {% block sidebar %}
 <h5>{{ question.category.study.name }}</h5>
-<h3>{{ question.name }}</h3><p class='lead'>{{ question.description }}
-<h4>Geographies</h4>
+<h2>{{ question.name }}</h2><p class='lead'>{{ question.description }}
+<h5>Geographies</h5>
 {{ form(form, {'attr': {'class': 'form-inline'}}) }}
 <a href='' id='update_me'><button class="btn" type="button">Update</button></a>
 <a href='' id='print_me'><button class="btn" type="button">Print</button></a>

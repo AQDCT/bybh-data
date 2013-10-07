@@ -25,8 +25,8 @@ include("includes/head.php");
 <!--  END MENU -->
 
 <div class="row" style="clear: both; background: white; margin-top: 45px; padding:15px;">
-  	<div class="sixteen columns">
-      <?php include("../app_dev.php"); ?>
+  	<div class="fifteen columns offset-by-one">
+      <?php include("../app.php"); ?>
     </div>
 </div>  	
 
