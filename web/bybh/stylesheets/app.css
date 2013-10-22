@@ -200,6 +200,16 @@ list-style: none;
 }
 
 /* -----------------------------------------
+  Side Menu
+----------------------------------------- */
+
+.hidden {
+  display: none;
+}
+}
+
+
+/* -----------------------------------------
    Vertical Slide-To & Sections
 ----------------------------------------- */
 .optxt {
@@ -316,8 +326,8 @@ font-style: italic;
 line-height: 5px;
 }
 
-.eng { color: red }
-.spa { color: orange }
+.eng { color: red; margin-right: 11px; }
+.spa { color: orange; margin-right: 11px; }
 
 /* -----------------------------------------
    Orbit
@@ -775,5 +785,7 @@ border-top: 3px solid #3dbcec;
 #close {
  float: right;
 }
+
+
 
  

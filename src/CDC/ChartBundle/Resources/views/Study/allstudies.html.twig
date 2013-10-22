@@ -6,7 +6,8 @@
 <h1>All studies</h1>
 
 {% for item in studies %}
-  <p><a href='{{ path('singlestudy', {'name': item.name}) }}'>{{ item.name }}</a><br/>{{item.description | truncate(250) | raw}}</p>
+  <p><a href='{{ path('singlestudy', {'name': item.name}) }}'>{{ item.name }}</a><br/>{{item.description | truncate(250) | raw}}<br/>
+    <a href='{{ path('singlestudy', {'name': item.name}) }}'>Read more...</a></p>
 {% endfor %}
 
 {% endblock %}

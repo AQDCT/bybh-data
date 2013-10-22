@@ -19,7 +19,7 @@ USE WITH SCROLLING PAGES -->
 				<a href="site-map.php">Site Map</a>&nbsp;&nbsp;&nbsp;
 				<a href="privacy_policy.php">Privacy Policy</a> &nbsp;&nbsp;
 					
-					<img src="/CDC/web/bybh/images/healthy_chicago_logo.png" align="absmiddle" />
+					<img src="images/healthy_chicago_logo.png" align="absmiddle" />
 				</ul>
 			</div>
 		</div>
@@ -29,18 +29,24 @@ USE WITH SCROLLING PAGES -->
 
   <!-- Included JS Files (Uncompressed) -->
 
+  <script src="javascripts/jquery.js"></script>
 
-  <script src="/CDC/web/bybh/javascripts/jquery.foundation.mediaQueryToggle.js"></script>
-  <script src="/CDC/web/bybh/javascripts/jquery.foundation.orbit.js"></script>
-  <script src="/CDC/web/bybh/javascripts/jquery.foundation.accordion.js"></script>
-  <script src="/CDC/web/bybh/javascripts/foundation.min.js"></script>
-  <script type="text/javascript" src="/CDC/web/bybh/stylesheets/jquery.easing.1.3.js"></script>
+<script src="javascripts/parsley.min.js"></script>
+  
+
+
+<!-- Included JS Files (Compressed) -->
+  <script src="javascripts/foundation.min.js"></script>
+
+<!-- Initialize JS Plugins -->
+<script src="javascripts/app.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
  <script type="text/javascript">
             $(function() {
                 $('ul.nav a').bind('click',function(event){
                     var $anchor = $(this);
-                    
+
                     $('html, body').stop().animate({
                         scrollTop: $($anchor.attr('href')).offset().top
                     }, 1500,'easeInOutExpo');

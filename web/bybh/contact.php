@@ -9,8 +9,7 @@
 <title>Contact | BeYouBeHealthy</title>
 
 <?php include("includes/head.php"); ?>
-   <script src="javascripts/parsley.min.js"></script>
-
+ 
 </head>
 
 

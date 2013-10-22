@@ -29,14 +29,12 @@
     	<ul class="nav open hide-for-small tpad105 tight list" style="position: fixed; padding-left: 25px">
     		<h4>Health Matters</h4>
     		<hr>
-    		<h4>
+    		<h4 style='margin-bottom: 0px;'>
     		<li><a href="#sectionT">Depression</a></li>
     		<li><a href="#sectionA">Disease Prevention</a></li>
     		<li><a href="#sectionB">Nutrition &amp; Physical Activity</a></li>
     		<li><a href="#sectionC">Substance Use</a></li>
-    		</h4>
-    		
-    		<h4 style="margin-bottom: 0px"><a href="#section0">Chronic Health Conditions</a></h4>
+    		<a href="#section0">Chronic Health Conditions</a></h4>
     		<span class="left-indent">
 			<li><a href="#section0">Asthma</a></li>
 			<li><a href="#section1">ADHD</a></li>

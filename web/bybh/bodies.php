@@ -23,50 +23,74 @@
 <?php include("includes/menu.php"); ?>
 <!--  END MENU -->
 
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+    $('.nav a').click(function() {
+        $('.nav span').addClass("hidden");
+        var id = $(this).attr('data-selector');
+        $('#' + id ).removeClass('hidden');
+    });
+
+});
+
+</script>
 
 <div class="row">
   	<div class="eleven columns">
   	</div>
   	<div class="three columns">
-    	<ul class="nav open hide-for-small tpad110 sm-list" style="position: fixed; padding-left: 25px">
+    	<ul class="nav open hide-for-small tpad110" style="position: fixed; padding-left: 25px">
     		<h4>Sex &amp; Relationships</h4>
     		<hr>
-    		<h4 style="margin-bottom: 0px"><a href="#section0">Bodies</a></h4>
+    		<h4 style="margin-bottom: 0px"><li><a href="#sectionT" data-selector='menu0'>Bodies</a></li></h4>
     		
-    		<span class="left-indent">
-			<li><a href="#sectionT">Puberty</a></li>
-			<li><a href="#section1">Boys’ Bodies</a></li>
-			<li><a href="#section2">Girls’ Bodies</a></li>
+    		<span class="left-indent" id="menu0">
+			<li><a data-selector='menu0' href="#sectionT">Puberty</a></li>
+			<li><a data-selector='menu0' href="#section1">Boys’ Bodies</a></li>
+			<li><a data-selector='menu0' href="#section2">Girls’ Bodies</a></li>
 			</span>
-			
-			
-			<h4 style="margin-bottom: 0px"><a href="#section0">Sex</a></h4>
+			</h4><h4 style="margin-bottom: 0px; margin-top: 0px"><li><a href="#section3" data-selector="menu1">Sex</a></li></h4>
     		
-    		<span class="left-indent">
-			<li><a href="#section3">How Do You Know You Are Ready?</a></li>
-			<li><a href="#section4">Love and Sex</a></li>
-			<li><a href="#section5">How to Say ‘No’</a></li>
-			<li><a href="#section6">Sex for One</a></li>
-			<li><a href="#section7">The First Time</a></li>
-			<li><a href="#section8">Doing It</a></li>
-			<li><a href="#section9">Sex and Religion</a></li>
-			<li><a href="#section10">Sex and The Law</a></li>
+    		<span class="left-indent hidden" id='menu1'>
+			<li><a href="#section3" data-selector="menu1">How Do You Know You Are Ready?</a></li>
+			<li><a href="#section4" data-selector="menu1">Love and Sex</a></li>
+			<li><a href="#section5" data-selector="menu1">How to Say ‘No’</a></li>
+			<li><a href="#section6" data-selector="menu1">Sex for One</a></li>
+			<li><a href="#section7" data-selector="menu1">The First Time</a></li>
+			<li><a href="#section8" data-selector="menu1">Doing It</a></li>
+			<li><a href="#section9" data-selector="menu1">Sex and Religion</a></li>
+			<li><a href="#section10" data-selector="menu1">Sex and The Law</a></li>
 			</span>
-			 
-			<h4 style="margin-bottom: 0px"><a href="#section0">Relationships</a></h4>
+			 </h4><h4 style="margin-bottom: 0px; margin-top: 0px"><li><a href="#section11" data-selector='menu2'>Relationships</a></li></h4>
     		
-    		<span class="left-indent">
-			<li><a href="#section11">Be You. Be Happy</a></li>
-			<li><a href="#section12">Be You and Single</a></li>
-			<li><a href="#section13">Coming Out</a></li>
-			<li><a href="#section20">Trans Health</a></li>
-			<li><a href="#section14">Crushing</a></li>
-			<li><a href="#section15">How to Ask Someone Out</a></li>
-			<li><a href="#section16">Being in a Relationship</a></li>
-			<li><a href="#section17">Being in a Safe Relationship</a></li>
-			<li><a href="#section18">Arguments Happen</a></li>
-			<li><a href="#section19">Breaking Up</a></li>
+    		<span class="left-indent hidden" id='menu2'>
+			<li><a href="#section11" data-selector='menu2'Be You. Be Happy</a></li>
+			<li><a href="#section12" data-selector='menu2'>Be You and Single</a></li>
+			<li><a href="#section13" data-selector='menu2'>Coming Out</a></li>
+			<li><a href="#section20" data-selector='menu2'>Trans Health</a></li>
+			<li><a href="#section14" data-selector='menu2'>Crushing</a></li>
+			<li><a href="#section15" data-selector='menu2'>How to Ask Someone Out</a></li>
+			<li><a href="#section16" data-selector='menu2'>Being in a Relationship</a></li>
+			<li><a href="#section17" data-selector='menu2'>Being in a Safe Relationship</a></li>
+			<li><a href="#section18" data-selector='menu2'>Arguments Happen</a></li>
+			<li><a href="#section19" data-selector='menu2'>Breaking Up</a></li>
 		  	</span>
+		  	</h4><h4 style="margin-bottom: 0px; margin-top: 0px"><li><a href="#section400" data-selector='menu3'>Staying Safe</a></li></h4>
+            
+            <span class="left-indent hidden" id='menu3'>
+    <li><a href="#section401" data-selector='menu3'>Sexual Violence</a></li>
+    <li><a href="#section402" data-selector='menu3'>Myths &amp; Facts Quiz</a></li>
+    <li><a href="#section403" data-selector='menu3'>Rape</a></li>
+    <li><a href="#section404" data-selector='menu3'>Dating Violence</a></li>
+    <li><a href="#section405" data-selector='menu3'>Being in a Safe Relationship</a></li>
+    <li><a href="#section406" data-selector='menu3'>How to Help a Friend</a></li>
+    <li><a href="#section407" data-selector='menu3'>Male Survivors</a></li>
+    <li><a href="#section408" data-selector='menu3'>Advocacy and Rights</a></li>
+    <li><a href="#section409" data-selector='menu3'>Take the Initiative </a></li>
+    <li><a href="#section410" data-selector='menu3'>Resources</a></li>
+  </span>
 		
     		<li class="back-top"><a href="#sectionT"style="font-size: 15px">back to top <i class="icon-double-angle-up" style="font-size: 16px; color: red"> </i></a></li>
     	</ul>
@@ -766,14 +790,17 @@ away because daring you to prove love is not love.
 		<p><b>Broadway Youth Center</b><br>
 		3179 N. Broadway Chicago, IL 60657<br>
 		773-935-3151<br>
-		<a href="http://www.howardbrown.org/byc" target="_blank">www.howardbrown.org/byc </a></p>
+		<a href="http://www.howardbrown.org/byc" target="_blank">www.howardbrown.org/byc
+</a></p>
 
 		<p><b>Young Women’s Empowerment Project:</b><br> 
-		<a href="http://ywepchicago.wordpress.com" target="_blank">ywepchicago.wordpress.com </a></p>
+		<a href="http://ywepchicago.wordpress.com" target="_blank">ywepchicago.wordpress.com
+</a></p>
  
 		<p><b>Project NIA</b><br>
 		773-392-5165<br>
-		<a href="http://www.project-nia.org" target="_blank">www.project-nia.org </a></p>
+		<a href="http://www.project-nia.org" target="_blank">www.project-nia.org
+</a></p>
  
 		<p><b>Transformative Justice Law Project of Illinois</b><br>
 		2040 N. Milwaukee Chicago, IL 60647<br>
@@ -782,7 +809,8 @@ away because daring you to prove love is not love.
 
 		<p><b>GenderJust</b><br>
 		773-869-9825<br>
-		<a href="http://www.genderjust.org" target="_blank">www.genderjust.org </a></p>
+		<a href="http://www.genderjust.org" target="_blank">www.genderjust.org
+</a></p>
  
 		<p><b>Howard Brown Health Center</b><br>
 		Sheridan Road Chicago, IL 60613<br> 
@@ -1005,34 +1033,795 @@ away because daring you to prove love is not love.
     		
 </div>
 
+<div id="section400" class="tpad">
+   		<div class="row">
+				<div class="nine columns offset-by-one">
+					<h1>Staying Safe</h1>
+				</div>
+			</div>
+
+    <div class="row" id="section401">
+      <div class="ten columns offset-by-one" style="margin-bottom: 100px">     
+           <h2>Sexual Violence</h2>
+<p><strong>Sexual Violence</strong><br>
+  Sexual violence occurs in many ways. Rape, sexual assault, sexual abuse, and sexual harassment are all types of sexual violence that people experience. </p>
+<p>To better understand what types of behaviors are considered &ldquo;sexual violence,&rdquo; here are some examples:</p>
+<ul type="disc">
+  <li>Being forced, tricked, or manipulated to have sex</li>
+  <li>Being forced to look at or touch someone&rsquo;s private parts</li>
+  <li>Being touched in a sexual way when you don&rsquo;t want to be      touched</li>
+  <li>Being forced to kiss someone</li>
+  <li>Being forced to look at or participate in sexual pictures      or movies</li>
+  <li>Being forced to listen to someone talk sexually to you</li>
+</ul>
+<p>When reading through these examples of sexual violence, did you notice if they have anything in common? You may have seen that all forms of sexual violence are sexual acts in which there is a <strong>lack of consent</strong>. In other words, unless you say &ldquo;yes&rdquo; to a sexual act, it is wrong for someone to touch you in a sexual way, make you touch them in a sexual way, have you look at sexual movies or images, or any other sexual behavior that you do not explicitly agree to participate in. </p>
+<p>To start a conversation about what consent does (or doesn&rsquo;t) look like, visit <a href="http://vimeo.com/9205801">http://vimeo.com/9205801</a></p>
+<p>To think about what it means to consent, visit <a href="http://www.youtube.com/watch?v=bgd3m-x46JU">http://www.youtube.com/watch?v=bgd3m-x46JU</a></p>
+<p>Without consent, any sexual act can be a form of sexual violence. If you have been in a sexual situation in which you were forced, tricked, or manipulated and you felt uncomfortable during the act, you can get help. There are many <u>resources</u> (&ldquo;resources&rdquo; should link to Sexual Violence Resources section) for those who have been sexually assaulted or sexually abused in the Chicago community, nationwide, and on the Internet.</p>
+<p>To share the experiences of survivors of sexual violence, check out Project Unbreakable: <a href="http://www.youtube.com/watch?v=5YN_GQStLbM">http://www.youtube.com/watch?v=5YN_GQStLbM</a></p>
+<p>If you or someone you know has experienced sexual violence, you can get help. If you&rsquo;d like to help spread the word about consent, there are lots of resources to help you become an advocate against sexual violence. Check out our <u>Sexual Violence Resources</u> section for support. (&ldquo;Sexual Violence Resources&rdquo; should link to Sexual Violence Resources section)</p>
+<p>To learn more about the influence of the media on &ldquo;normalizing&rdquo; sexual violence, especially in the context of drinking alcohol: <a href="http://www.youtube.com/watch?v=-hr58RXDC3o">http://www.youtube.com/watch?v=-hr58RXDC3o</a></p>
+
+  <h2><strong>Verbal Signals of Consent</strong></h2>
+<table border="0" cellpadding="0" width='100%'>
+  <tr>
+    <td><p><strong>What can <u>consent</u> sound like?</strong></p></td>
+    <td><p><strong>What can <u>NONconsent</u> sound    like?</strong></p></td>
+  </tr>
+  <tr>
+    <td><p>Yes</p></td>
+    <td><p>No</p></td>
+  </tr>
+  <tr>
+    <td><p>I'm sure</p></td>
+    <td><p>I'm not sure</p></td>
+  </tr>
+  <tr>
+    <td><p>I'm excited</p></td>
+    <td><p>I'm scared</p></td>
+  </tr>
+  <tr>
+    <td><p>I want to...</p></td>
+    <td><p>I want to, but...</p></td>
+  </tr>
+  <tr>
+    <td><p>I still want to...</p></td>
+    <td><p>I thought I wanted to, but...</p></td>
+  </tr>
+  <tr>
+    <td><p>That feels good</p></td>
+    <td><p>That hurts</p></td>
+  </tr>
+  <tr>
+    <td><p>Mmmmmmm</p></td>
+    <td><p>[silence]</p></td>
+  </tr>
+  <tr>
+    <td><p>Yes</p></td>
+    <td><p>Maybe</p></td>
+  </tr>
+  <tr>
+    <td><p>I love you/this</p></td>
+    <td><p>I love you/this, but...</p></td>
+  </tr>
+  <tr>
+    <td><p>I feel good about this</p></td>
+    <td><p>I don't know how I feel about this</p></td>
+  </tr>
+  <tr>
+    <td><p>I'm ready</p></td>
+    <td><p>I'm not ready or not sure if I'm ready</p></td>
+  </tr>
+  <tr>
+    <td><p>Yes</p></td>
+    <td><p>[silence]</p></td>
+  </tr>
+</table>
+  <h2><strong>Nonverbal Consent</strong></h2>
+<table border="0" cellpadding="0">
+  <tr>
+    <td><p><strong>Possible nonverbal signs of <u>consent</u></strong></p></td>
+    <td><p><strong>Possible nonverbal signs of <u>NONconsent</u></strong></p></td>
+  </tr>
+  <tr>
+    <td><p>Direct eye contact</p></td>
+    <td><p>Avoiding eye contact</p></td>
+  </tr>
+  <tr>
+    <td><p>Initiating <a href="http://www.scarleteen.com/glossary/term/3348">sexual</a> activity</p></td>
+    <td><p>Not initiating any <a href="http://www.scarleteen.com/glossary/term/3348">sexual</a> activity</p></td>
+  </tr>
+  <tr>
+    <td><p>Actively touching someone</p></td>
+    <td><p>Avoiding touch</p></td>
+  </tr>
+  <tr>
+    <td><p>Comfort with nudity</p></td>
+    <td><p>Discomfort with nudity</p></td>
+  </tr>
+  <tr>
+    <td><p>&quot;Open&quot; body language, like   relaxed, loose and open arms and legs, relaxed facial expressions, turning   towards someone</p></td>
+    <td><p>&quot;Closed&quot; body language, like   tense, stiff or closed arms and legs, tight or tense facial expressions,   turning away from someone</p></td>
+  </tr>
+  <tr>
+    <td><p>An active body</p></td>
+    <td><p>&quot;Just lying there&quot;</p></td>
+  </tr>
+</table>
+<p>From: <em>Driver&rsquo;s Ed for the Sexual Superhighway: Navigating Consent</em>. Heather Corinna, Scarleteen.com, 2010.</p>
+     	</div>
+    </div>    		
+</div>
+
+<div id="section402" class="tpad">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-bottom: 100px">     
+           <h2>Myth & Facts Quiz</h2>
+
+<style>
+.answer {
+	color: blue;
+	display: none;	
+}
+.red {
+	color: red;
+}
+</style>
+<script type="text/javascript">
+$( document ).ready(function() {
+			  var correctAnswers = 0;
+			$( "input" ).click(function() {
+				var value = $(this).attr('name');
+				var whichAnswer = $(this).attr('id') + 'A';
+
+			  if(value == 'false') { correctAnswers++; $(this).prev('input').prop('checked', false); }
+			 
+        if(value == 'true') { 
+          $(this).next('input').prop('checked', false); 
+        }
+
+				$( '#' + whichAnswer ).removeClass('answer');
+			});
+});
+
+</script>
+<p>1. It&rsquo;s not really rape if a victim does not resist or fight their attacker.</p>
+<p>
+  <input name="true" type="checkbox" id="q1" value="True">
+  True <input name="false" type="checkbox" id="q1" value="False">
+  False
+</p>
+<div class="answer" id="q1A">
+    <blockquote>
+  <p><strong>FALSE     </strong><br>
+    Most women fear rape and fear alone can immobilize them.  Many women have been told to be submissive and to go along with the assailant to avoid injury or death.  Even though many women may not physically resist an attacker due in part to their upbringing and fear of violence, this does not mean they consented or were willing to go along with the attack.</p>
+</blockquote>
+</div>
+<p>2. The victim provokes rape if they dress &ldquo;sexy,&rdquo; act seductively, or are under the influence of drugs/alcohol. </p>
+<p>
+  <input name="true" type="checkbox" id="q2" title="True">
+  True <input name="false" type="checkbox" id="q2" title="False">
+  False
+</p>
+<div class="answer" id="q2A">
+    <blockquote>
+  <p><strong>FALSE     </strong><br>
+    This myth takes away the criminal blame from the offender and places the responsibility on the victim.  The assailant chooses their actions, there was always a choice not commit a rape.  Actions or style of dress is NOT an invitation for rape.  Nothing a person does causes nor invites a brutal and violent attack.</p>
+</blockquote>
+</div>
+<p>3. Most sexual assaults occur in &ldquo;bad&rdquo; neighborhoods with high crime rates. </p>
+<p>
+  <input name="true" type="checkbox" id="q3" title="True">
+  True <input name="false" type="checkbox" id="q3" title="False">
+  False
+</p>
+<div class="answer" id="q3A">
+    <blockquote>
+  <p><strong>FALSE     </strong><br>
+  Anyone can be raped: young, old, male or female.  Their appearance is seldom a consideration.  Rapists are not necessarily looking for attractive victims but rather vulnerable ones.  Assailants often choose victims who seem most vulnerable to attack:  acquaintances, old persons, children, partners, physically or emotionally disabled persons, substance abusers, and street persons.</p>
+</blockquote>
+</div>
+<p>4. A victim has to be beaten or have physical injuries to really have been raped.</p>
+<p>
+  <input name="true" type="checkbox" id="q4" title="True">
+  True <input name="false" type="checkbox" id="q4" title="False">
+  False
+</p>
+<div class="answer" id="q4A">
+    <blockquote>
+<p><strong>FALSE     </strong><br>
+In 87% of cases, the victim was initially subdued by the assailant&rsquo;s verbal threats, and by an overwhelming fear of being killed.  The fact that there are no broken bones or bruises does not indicate that a person has not been raped.  The threat of violence may cause a person to &ldquo;freeze.&rdquo;  In fear of their life, a person may &ldquo;submit,&rdquo; but this is a valid coping behavior.  This is considered part of Rape Trauma Syndrome; no response is inappropriate.</p>
+</blockquote>
+</div>
+
+<p>5. Rape is motivated by sudden, uncontrollable sexual urges and desires. </p>
+<p>
+  <input name="true" type="checkbox" id="q5" title="True">
+  True <input name="false" type="checkbox" id="q5" title="False">
+  False
+</p>
+<div class="answer" id="q5A">
+    <blockquote>
+  <p><strong>FALSE     </strong><br>
+Rape is an act of power, anger, and dominance over another person.  75%-95% of rapes are planned.  Rape not only violates a person&rsquo;s body, but also their sense of safety and control over their life.</p>
+</blockquote>
+</div>
+<p>6. Women frequently lie about &ldquo;rape&rdquo;; there is a high rate of false reporting.</p>
+<p>
+  <input name="true" type="checkbox" id="q6" title="True">
+  True <input name="false" type="checkbox" id="q6" title="False">
+  False
+</p>
+<div class="answer" id="q6A">
+    <blockquote>
+  <p><strong>FALSE     </strong><br>
+Studies show that only 3% of rape reports are false, which is no higher than in reporting of other felonies.</p>
+</blockquote>
+</div>
+<p>7. About 66% of all sexual assaults are reported. </p>
+<p>
+  <input name="true" type="checkbox" id="q7" title="True">
+  True <input name="false" type="checkbox" id="q7" title="False">
+  False
+</p>
+<div class="answer" id="q7A">
+    <blockquote>
+ <p> <strong>FALSE     </strong><br>
+  
+  Only about 10%-20% of all sexual assaults are reported.</p>
+  </blockquote>
+</div>
+<p>8. It is impossible for a person to sexually assault a partner.</p>
+<p>
+  <input name="true" type="checkbox" id="q8" title="True">
+  True <input name="false" type="checkbox" id="q8" title="False">
+  False
+</p>
+<div class="answer" id="q8A">
+  <blockquote>
+  <p><strong>FALSE     </strong><br>
+  Regardless of marital or social relationship, if a person does not consent to sexual activity, they are being sexually assaulted.  The rate of domestic violence and partner assault is about the same for both heterosexual and LGBTQ relationships.</p>
+</blockquote></div>
+<p>9. Rape is committed by monstrous criminals who do not know their victims. <br>
+<p>
+  <input name="true" type="checkbox" id="q9" title="True">
+  True <input name="false" type="checkbox" id="q9" title="False">
+  False
+</p>
+<div class="answer" id="q9A">
+  <blockquote>
+  <p><strong>FALSE     </strong><br>
+  As many as 80% of all assaults involve acquaintances.  An assailant might be someone you have seen around another person you know intimately.  It may be co-worker, a friend or a family member.</p>
+</blockquote></div>
+<p>10. It is impossible to sexually assault a man. </p>
+<p>
+  <input name="true" type="checkbox" id="q10" title="True">
+  True <input name="false" type="checkbox" id="q10" title="False">
+  False
+</p>
+<div class="answer" id="q10A">
+  <blockquote>
+  <p><strong>FALSE     </strong><br>
+  Men fall victim for the same reasons as women:  they are overwhelmed by threats or acts of physical and emotional violence.  Men are also assaulted by both strangers and acquaintances, be the assailants male or female.</p></div>
+</blockquote>
+     	</div>
+    </div>    		
+</div>
+
+<div id="section403" class="tpad">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-bottom: 100px">     
+           <h2>Rape</h2>
+<p>Rape is a form of sexual assault where someone is forced to have sexual intercourse with someone against their will. </p>
+<p>Many people think rape is only perpetrated by a stranger. In reality, it is more common for someone to be raped by a person he or she knows. &ldquo;Acquaintance rape&rdquo; is the term used to describe a rape when the victim knows the attacker. There is no legal difference between rape by a stranger and rape by an acquaintance. Either way it is a crime.</p>
+<p>Remember, in a relationship you have the right to</p>
+<ul type="disc">
+  <li>a life without violence</li>
+  <li>reject unwanted attention                                                                                  </li>
+  <li>change your mind whenever you want      to&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </li>
+  <li>be yourself without changing to please      others</li>
+  <li>decide whether you want physical and sexual      contact </li>
+  <li>change a relationship when your feelings      change</li>
+  <li>say &ldquo;NO.&rdquo;</li>
+</ul>
+<p>Under Illinois law, consent is one thing and one thing only: a clear &ldquo;YES.&rdquo;</p>
+<p>If you have been raped, do not blame yourself. There are many resources you can turn to for medical, legal, and advocacy support. Learn more at our Sexual Violence Resources page. (&ldquo;Sexual Violence Resources&rdquo; should link to Sexual Violence Resources section)</p>
+<p>Sources: Illinois Coalition Against Sexual Assault (ICASA), <em>Acquaintance Rape</em> (<a href="http://www.icasa.org/docs/brochures/aqr%202012.pdf">http://www.icasa.org/docs/brochures/aqr%202012.pdf</a>) <br>
+Illinois Coalition Against Sexual Assault, <em>After Sexual Assault</em> (<a href="http://www.icasa.org/docs/brochures/after%20sexual%20assault%202013.pdf">http://www.icasa.org/docs/brochures/after%20sexual%20assault%202013.pdf</a>)</p>
+
+     	</div>
+    </div>    		
+</div>
+
+<div id="section404" class="tpad">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-bottom: 100px">     
+           <h2>Dating Violence</h2>
+  <p><strong>Dating Violence is a pattern of physically, sexually, verbally, and/or emotionally abusive or controlling behavior in a dating relationship.</strong></p>
+<p>It may involve digital communications and technologies, verbal communication, and physical interactions.</p>
+<p><strong><u>Physical Abuse</u> is any unwanted contact with the other person&rsquo;s body. It does not have to leave a mark or a bruise. <strong></strong></p>
+<blockquote>
+  <p>Some examples: <br>
+    scratching, pinching, biting, pulling hair, spitting, choking, <br>
+    pushing, physical restraint, kicking, slapping</p>
+  </p>
+</blockquote>
+<p><strong><u>Sexual Abuse</u></strong> is any sexual behavior that is unwanted or that interferes with the other person&rsquo;s right to say &ldquo;no&rdquo; to sexual advances <strong></strong>.</p>
+<blockquote>
+  <p>Some examples: <br>
+    unwanted kissing/touching<br>
+    date rape<br>
+    forcing someone to go further sexually than she or he wants to<br>
+    unwanted rough or violent sexual activity<br>
+    not letting someone use protection against STIs or birth control <br>
+    forcing someone to pose for still/video images of him/herself and share them<br>
+    forcing someone to wear or not wear items of clothing<br>
+    recording a sexual act or nude image of someone without their consent<br>
+    sending someone unsolicited and unwelcomed sexual images </p>
+</blockquote>
+<p><strong><u>Verbal/Emotional Abuse</u></strong> is saying or doing something to another person that causes the person to have a lower self-esteem<strong>, </strong>trying to control the person&rsquo;s feelings or behaviors,<strong> </strong>and<strong> </strong>take place in real life or through digital technologies, like social networks, text messages, etc – including through online posts or digital communications that threaten, harass, or embarrass someone.<strong></strong></p>
+<blockquote>
+  <p>Some Examples: <br>
+    name-calling and put downs                                                                              <br>
+    insulting the person or her/his family or friends                                  <br>
+    making racial, ethnic, or religious slurs                                                      <br>
+    making unwanted comments of a sexual nature <br>
+    embarrassing the person in front of others<br>
+    spreading negative rumors about the person<br>
+    telling the person what to do<br>
+    threatening to commit suicide/expose personal information/harm a person&rsquo;s friends or family<br>
+    making the person feel guilty<br>
+    stalking<br>
+    excessive/unwanted communication</p>
+</blockquote>
+<p>Courtesy of <a href="http://www.breakthecycle.org/">Breakthecycle.org</a> (hyperlink to <a href="breakthecycle.org">breakthecycle.org</a>)</p>
+
+     	</div>
+    </div>    		
+</div>
+
+<div id="section405" class="tpad">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-bottom: 100px">     
+           <h2>Being in a Safe Relationship</h2>
+<p>It&rsquo;s important to remember that you <strong>do not</strong> have to be together all of the time – this goes for boyfriends or girlfriends and even best friends. There is a difference between spending time together and spending quality time together. Everyone needs time and space to breathe, and do their own thing. This time apart can feel a little scary or make people feel insecure – but you need to accept it – because it is the only way for two people to build a healthy, long-term relationship. </p>
+<p>Losing sight of your own interests and needs is sure sign that things are out of balance. Sometimes it&rsquo;s the first sign that something is going wrong in a relationship. </p>
+<p>And things do go wrong. You may not get any warning or it may be something that has been building for a while that just doesn&rsquo;t feel quite right. </p>
+<p>You may find yourself with someone who says they care for you but they make you feel vulnerable, nervous, scared or frightened. They might physically hurt you in some way or pressure or force you to have sex, which is never ok. But it might be more subtle than that. They might check your phone or e-mail without your permission, or guilt or pressure you into showing them, get jealous, insecure, or possessive of you.&nbsp; They might accuse you of cheating on them, order you around, or tell you who to hang out with or where to go. These kinds of controlling behaviors can be confusing, because it might seem like your partner&rsquo;s feelings for you are so strong, they just can&rsquo;t stand the idea of being apart from you for one second. It&rsquo;s flattering to have someone care for you, but when it crosses the line into obsessive, controlling behavior, love gets all twisted around and becomes something else: it becomes abuse. </p>
+<p>If you feel like you or someone you know may be in an unhealthy situation, you can take this danger assessment from the One Love Foundation to determine the risk: <br>
+  <img width="67" height="67" src="file:///Macintosh HD/Users/paul/Library/Application Support/Adobe/Dreamweaver CC/en_US/OfficeImageTemp/clip_image002.png" alt="http://beyoubehealthy.org/images/one-love.png"> <br>
+  If you are feeling or being treated this way, take a moment and remember: Being in this relationship is a choice. If you don&rsquo;t feel you can get out of it easily because you&rsquo;re frightened of the consequences then it is important that you tell someone who can protect your safety.</p>
+<p>Do you have a trusted friend, family member or a teacher that you can talk to? If not there are organizations that can help you. Visit loveisrespect.org to learn more.&nbsp;If you need help right away, text the National Dating Abuse Hotline:&nbsp;text 'loveis'&nbsp;to 77054&nbsp;or call&nbsp;<a href="file://localhost/tel/1-866-331-9474">1-866-331-9474</a>.</p>
+<p>You can also call the City of Chicago&rsquo;s free Domestic Violence Help Line&nbsp;at <a href="file://localhost/tel/1-877-863-6338">1-877-863-6338</a>.</p>
+<p><strong>LINKS TO RESOURCES: </strong><br>
+  One Love Foundation's 'Be 1 For Change' video<strong> make the embedded video larger</strong> <br>
+  <br>
+  <a href="http://www.joinonelove.org/main.asp?page=78" target="_blank">Free Danger Assessment Mobile App</a>: Feeling unsure about your relationship, or a friend&rsquo;s? Take this free quiz. <br>
+  <a href="http://sexedloop.com/need-to-know/healthyrelationships/" target="_blank">Sex Ed Loop Blog</a>: What you need to know about healthy relationships<br>
+  <a href="http://www.cityofchicago.org/city/en/depts/cdph/provdrs/violence_prev.html" target="_blank">City of Chicago Violence Prevention</a>: Improving Health by Promoting Peace <br>
+  <a href="http://www.cityofchicago.org/city/en/depts/fss/supp_info/information_for_youngadults.html" target="_blank">City of Chicago Information for Young Adults</a>: Dating Bill of Rights <br>
+  <a href="www.breakthecycle.org" target="_blank">Break the Cycle</a>: Empowering youth to end domestic violence <br>
+  <a href="www.loveisnotabuse.com" target="_blank">Love is Not Abuse</a>: Engaging everyone in promoting healthy relationships <br>
+</p>
+
+     	</div>
+    </div>    		
+</div>
+
+<div id="section406" class="tpad">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-bottom: 100px">     
+<h2>How to Help a Friend or Someone You Love</h2>
+<h3>Remember: Rape is NEVER the victim&rsquo;s fault!</h3>
+  <p>Imagine a person you love has been the victim of sexual violence, they trust you, and disclose that this has happened to them. Your friend may be terrified or have feelings of helplessness, which are perfectly normal responses. Your friend needs support and time to work through her/his feelings. Even if your friend does not want to report the act of violence to the police, encourage him or her to receive medical attention as soon as possible. </p>
+  <h4>What are the best ways to help a friend who is a victim of sexual violence?</h4>
+  <p><strong>Believe your friend&rsquo;s experience without question. </strong><br>
+  Don&rsquo;t blame your friend. Whatever the circumstances, your friend <strong>WAS NOT </strong>looking or asking to get raped.</p>
+<p><strong>Respect your friend&rsquo;s fear. </strong><br>
+Rapists may threaten to kill the victim if they don&rsquo;t do what they are told. Many victims fear for their lives and this fear stays after the incident ends. Help your friend by finding ways to make them feel safer.</p>
+<p><strong>Accept your friend&rsquo;s strong feelings. </strong><br>
+  Being supportive doesn&rsquo;t mean you have to do something. It means accepting your friend&rsquo;s feelings and providing a feeling of warmth and safety. Tolerate their moods; be there for them. Listen.</p>
+<p><strong>Listen without judgment or giving advice. </strong><br>
+  Try to feel for what your friend is going through. Don&rsquo;t criticize their feelings or actions. Your friend did the very best she/he knew how in a deadly situation. <strong></strong></p>
+<p><strong>Take your friend seriously. </strong><br>
+  Pay attention. This will help your friend validate her/his feelings. Recovery is a process of acceptance and healing that takes time. One of the most important factors in the recovery is how supported they feel by the people around them.  </p>
+<p><strong>Encourage your friend to not expect too much of themselves.</strong><br>
+  Ask that they be good to himself/herself as much as possible. This means that you must not expect too much of your friends either. Life may seem dark to your friend for a while. Whatever brings some safety and simplicity to their life will help.</p>
+<p><strong>Stay with your friend as long as they need you. </strong><br>
+  For a while, many victims feel scared to be alone. This will pass with time, but in the meantime, be good company. Accompany your friend to receive the support that they may need, like walking them to the local rape crisis center or to the police station.</p>
+<p><strong>Let your friend make her/his own decision. </strong><br>
+  Do not pressure your friend into making decisions or doing things she/he isn&rsquo;t ready to do. Help your friend explore all her/his options. Who your friend wants to talk to must be her/his decision</p>
+<p><strong>Take care of yourself. </strong><br>
+  In order to care about your friend, you may need to deal with some difficult emotions of your own. If you&rsquo;re feeling rage, blame, or feelings of loss yourself, you can be most helpful to your friend by finding ways to deal with your emotions. Remember no one can protect another person at all times. If you are having a difficult time with your own feelings, it may help to talk with a counselor.<strong></strong></p>
+<p>&nbsp;</p>
+<p>Courtesy of <u>Rape Victims Advocates (RVA)</u> (hyperlink to <a href="http://www.rapevictimadvocates.org/">http://www.rapevictimadvocates.org/</a>) </p>
+
+     	</div>
+    </div>    		
+</div>
+
+<div id="section407" class="tpad">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-bottom: 100px">     
+           <h2>Male Survivors</h2>
+<blockquote>When many people think of sexual violence, they think of it as &ldquo;a woman&rsquo;s problem&rdquo;</blockquote>
+<p>As a result, sexual violence education often teaches women to protect themselves. Most education focuses on teaching men not to rape, and teaching women how &lsquo;not to be raped&rsquo;. </p>
+<p><strong>It is also important to recognize that men can be sexually assaulted.</strong><strong> </strong></p>
+<p>Sexual violence is about one person trying to take the power away from another and taking control over her or him. In other words, sexual violence is a crime that is not motivated by sex. To hear more about rape as &ldquo;a power issue,&rdquo; listen to a former US Marine&rsquo;s story on overcoming rape by <a href="http://www.bbc.co.uk/news/magazine-23152463" target="_blank">clicking here</a>.</p>
+<p>If you are a victim of sexual violence, it is not your fault. No matter where you were or what you did or did not do, the only thing that causes an act of violence is a perpetrator. While studies show that many men do not report an occurrence of sexual assault, it is important for you to come forward to get the help you deserve.
+<h3>Men and Sexual Assault</h3>
+<p>[INSERT CHART]</p>
+<p>Some of the reasons males do not come forward:</p>
+<ul>
+  <li>Fear that they won&rsquo;t be believed.</strong><br/> When many people think of a sexual assault,       they think of a man assaulting a woman and may find it hard to accept the       fact that men are sexually assaulted as well.</li>
+  
+  <li>Fear of being blamed</li>
+  <ul>
+    <li>You may think &quot;…if only I would have       been more careful or aware…&quot; These thoughts may lead you to believe       that the attack was somehow your fault. Others may make it worse by       implying that if you would - or would not have done - certain things, you       wouldn&rsquo;t have been raped. </li>
+  </ul>
+</ul>
+<ul>
+  <li>Question of &ldquo;Manhood&rdquo;</li>
+  <ul>
+    <li>&quot;Manhood&quot; is often measured in       terms of physical and emotional strength. Sometimes, a male survivor       won&rsquo;t come forward because he fears that others might question his       &quot;manhood&quot; because of what has happened to him.</li>
+  </ul>
+</ul>
+<ul>
+  <li>Question of sexuality</li>
+  <ul>
+    <li>When a man is raped, it is almost always by       another man, and research seems to indicate that some victims never come       forward because they fear being labeled homosexual or gay, especially if       the victim has an erection or ejaculates--a physical response that can       happen even if the victim is unconscious.</li>
+  </ul>
+</ul>
+<p>While many of these reasons stop men from coming forward about sexual violence, all victims deserve medical, legal, and advocacy support. </p>
+<p>If you are a man who has experienced sexual violence, you can get help through a variety of sexual assault resources by clicking here. . (&ldquo;Clicking here&rdquo; should link to the Sexual Violence Resources section)</p>
+<p>Source <br>
+  &ldquo;Male Survivors&rdquo; by the Illinois Coalition Against Sexual Assault (ICASA) <br>
+<a href="http://www.icasa.org/docs/male_survivors_brochure.pdf">http://www.icasa.org/docs/male_survivors_brochure.pdf</a></p>
+
+     	</div>
+    </div>    		
+</div>
+
+<div id="section408" class="tpad">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-bottom: 100px">     
+           <h2>Advocacy and Rights</h2>
+<p><strong>What is advocacy? </strong></p>
+<p>After you have been raped or sexually assaulted, you may want someone to assist you with what happens next. &nbsp;&nbsp;&nbsp; </p>
+<blockquote>
+  <p>Should you go to the hospital?                                      <br>
+    Should you report the rape to the police?<br>
+    Should you file criminal charges against the attacker?</p>
+</blockquote>
+<p>The <strong>advocate</strong> is the victim&rsquo;s confidential personal link. An advocate knows the workers at the hospital, police station, and courthouse. They work with these people to help the victim and their family. Most importantly, you do not have to pay for an advocate&rsquo;s help.</p>
+<p><strong>How to Get an Advocate </strong></p>
+<p>There are several ways a victim or their family and friends can contact an advocate. </p>
+<p>The Illinois Coalition Against Sexual Assault (ICASA) has rape crisis centers all over the state. You can find information about each center at the <u>ICASA website</u> (hyperlink to <a href="http://www.icasa.org/home.aspx?PageID=500&">http://www.icasa.org/home.aspx?PageID=500&amp;</a>) </p>
+<ul>
+  <li>They also have counselors who can listen and      advise you.</li>
+</ul>
+<ul>
+  <li>Rape Victim Advocates (RVA) also provides      advocacy and counseling to those affected by rape. Call 312-443-9603 or      visit the <u>RVA website</u> (hyperlink to <a href="http://www.rapevictimadvocates.org/">http://www.rapevictimadvocates.org/</a>) for more information.</li>
+</ul>
+<ul>
+  <li>At the hospital emergency room, ask a nurse      or other hospital employee to call an advocate. The advocate will come to      the hospital to help the victim.</li>
+</ul>
+<ul>
+  <li>Call the police to report the crime, and ask      the police to call an advocate.</li>
+</ul>
+<p><strong>Advocate&rsquo;s Limitations</strong></p>
+<p>An advocate can assist the victim in several ways; however, there are certain things that the advocate can&rsquo;t do. An advocate does not:</p>
+<ul>
+  <li>influence the victim&rsquo;s decision to report or      file charges.</li>
+</ul>
+<ul>
+  <li>investigate the case or testify in the case.</li>
+</ul>
+<ul>
+  <li>counsel the victim</li>
+</ul>
+<p><strong>Victim&rsquo;s Rights</strong><strong> </strong></p>
+<p>A sexual assault victim is guaranteed rights under the Illinois Constitution and Illinois statutes. They include:</p>
+<ul>
+  <li>The right to be treated with fairness and respect for their      dignity and privacy throughout the criminal justice process.</li>
+</ul>
+<ul>
+  <li>The right to notification of court      proceedings.</li>
+</ul>
+<ul>
+  <li>The right to communicate with the      prosecution.</li>
+</ul>
+<ul>
+  <li>The right to make a statement to the court      at sentencing.</li>
+</ul>
+<ul>
+  <li>The right to information about the      conviction, sentence, imprisonment, and release of the accused.</li>
+</ul>
+<ul>
+  <li>The right to the timely disposition of the      case following the arrest of the accused.</li>
+</ul>
+<ul>
+  <li>The right to be present at the trial and all      other court proceedings on the same basis as the accused</li>
+</ul>
+<ul>
+  <li>The right to restitution, or compensation.</li>
+</ul>
+<p><strong>The Law</strong></p>
+<p>Sexual assault is when someone is forced into a sexual act (penetration, touching, fondling, etc.) that they didn&rsquo;t want to happen (without consent). </p>
+<p>The Illinois Criminal Sexual Assault Law defines different kinds of assaults:</p>
+<ul>
+  <li><strong>Criminal Sexual Assault</strong></li>
+  <ul>
+    <li>the attacker used force to sexually       penetrate the victim&rsquo;s body.</li>
+  </ul>
+</ul>
+<ul>
+  <li><strong>Aggravated Criminal Sexual      Assault</strong></li>
+  <ul>
+    <li>the attacker used a weapon or threatened to       kill the victim during the sexual assault.</li>
+  </ul>
+</ul>
+<ul>
+  <li><strong>Criminal Sexual Abuse</strong></li>
+  <ul>
+    <li>the attacker used force to touch the       victim&rsquo;s sex organs, anus, or breast.</li>
+  </ul>
+</ul>
+<ul>
+  <li><strong>Aggravated Criminal Sexual      Abuse</strong></li>
+  <ul>
+    <li>the attacker used a weapon or threatened to       kill the victim during the sexual abuse.</li>
+  </ul>
+</ul>
+<ul>
+  <li><strong>Predatory Criminal Sexual      Assault of a Child</strong></li>
+  <ul>
+    <li>an adult commits sexual assault on a child       under age 13</li>
+  </ul>
+</ul>
+<p><strong>Get Help</strong></p>
+<p>Rape crisis centers have 24-hour-a-day hotlines where trained individuals will provide you with supportive services. </p>
+<p>Staff at the center can also help you report the crime to police or go with you to the hospital. They can also just listen and offer you information and support. </p>
+<p>Rape crisis services are free and confidential. </p>
+<ul>
+ 
+    <li>The Chicago Rape Crisis Hotline is       available 24/7 at 1-888-293-2080. </li>
+    <li>You can also contact the Rape Victim       Advocates (RVA) for support at 312-443-9603 or visit their <a href="http://rapevictimadvocates.org/">website</a>.</li>
+    <li>You can also find a <a href="http://www.icasa.org/crisiscenters.aspx?pageid=501">rape crisis center </a>nearest you through       the Illinois Coalition Against Sexual Assault (ICASA). </li>
+</ul>
+
+<p>Source: Illinois Coalition Against Sexual Assault (ICASA),  <u>A Guide to Advocacy Series (ICASA)</u><br>
+  (hyperlink to <a href="http://www.icasa.org/docs/brochures/guide%20to%20advocacy%20services%202013.pdf">http://www.icasa.org/docs/brochures/guide%20to%20advocacy%20services%202013.pdf</a>)</p>
+
+     	</div>
+    </div>    		
+</div>
+
+<div id="section409" class="tpad">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-bottom: 100px">     
+           <h2>Take the Initiative</h2>
+<h3>10 Things You Can Do to Stop Rape</h3>
+  <p><strong>1. Know that language is powerful.</strong></p>
+  <blockquote>
+    <p>Words that dehumanize women, frequently in a sexualized way, are common. When we describe someone as an object meant to be acted upon, and then discarded, it gets easier to treat them that way. </p>
+    <p><em>What you can do:</em> Use humane and respectful language. </p>
+    </p>
+  </blockquote>
+<p><strong>2. Communicate about sex.</strong></p>
+<blockquote>
+  <p>We have a cultural myth that &ldquo;good sex should be intuitive,&rdquo; but the reality is that it is based on communication. Consent can never be assumed. Coercion and force are illegal. Get comfortable talking with, and listening to, your partner. </p>
+  <p><em>What you can do:</em> &ldquo;No&rdquo; means no.</p>
+</blockquote>
+<p><strong>3. Speak out.</strong></p>
+<blockquote>
+  <p>You may or may not ever have the opportunity to prevent a rape in progress. However, you will have many, many opportunities to challenge the attitudes and behaviors that are part of the larger rape culture. </p>
+  <p><em>What you can do:</em>  When you see harassment, <strong>intervene</strong>. <br>
+    When you hear jokes about violence against women, don&rsquo;t laugh. Explain why <strong>it&rsquo;s not funny</strong>. <br>
+    <strong>Write letters</strong> to magazines that promote images of women as dehumanized sex objects. <br>
+    <strong>Support laws</strong> that protect women from violence and help them successfully prosecute their abusers.                  <br>
+    Silence=Complicity</p>
+</blockquote>
+<p><strong>4. Support survivors.</strong>
+<blockquote>
+  <p>Listen to the women and men in your life who may be survivors, and believe them. More than 1 million women are raped in America each year. Learn how to be supportive, and know your local rape crisis center where they can get resources and help.  
+  <P>[INSERT CHART]</P>
+  <p><em>What you can do:</em>  Get support yourself.</p></blockquote>
+
+<p><strong>5. Give your time.</strong></p>
+<blockquote>
+  <p>Volunteer for organizations working to end violence against women. Get further training on how to be an effective ally. Most rape crisis centers and community organizations are funded exclusively through grants and donations. </p>
+  <p><em>What you can do:</em>  Support the work of local organizations such as <u><a href="http://www.rapevictimadvocates.org/" target="_blank">Rape Victims Advocates (RVA)</a></u> and <u><a href="http://www.icasa.org/home.aspx?PageID=500&" target="_blank">Illinois Coalition Against Sexual Abuse (ICASA)</a></u> in whatever ways you can.</p>
+</blockquote>
+<p><strong>6. Talk with women</strong><strong>.</strong></p>
+<blockquote>
+  <p>Find out what it feels like to live with the threat of rape every day. Find out how they like to be supported. Ask what they would like you to do to challenge rape. </p>
+  <p><em>What you can do:</em>  Really listen.</p>
+</blockquote>
+<p><strong>7. Talk with men.</strong></p>
+<blockquote>
+  <p>Find out how rape has impacted their lives. Find out how much men lose by being seen as potential rapists. Find out what other men have to say about how to change that reality. Find out how to support male survivors of rape and sexual abuse. </p>
+<em>What you can do:</em>  Really listen.</blockquote>
+<p><strong>8. Organize.</strong></p>
+<blockquote>
+  <p>Create a men&rsquo;s movement against male violence against women: start a dialogue group to examine cultural attitudes about rape, start a men&rsquo;s anti-rape group, bring workshops and trainings into your school or workplace. </p>
+  <p><em>What you can do:</em>  Check a local men&rsquo;s or women&rsquo;s center for resources and support, including <u><a href="http://mystrength.org" target="_blank">MyStrength</a></u>, <u><a href="http://www.mencanstoprape.org" target="_blank">Men Can Stop Rape</a></u>, and <u><a href="https://netfiles.uiuc.edu/ro/www/MenAgainstSexualViolence/becomingactive.htm" target="_blank">Mentors in Violence Prevention (MVP)</a></u>.</p>
+</blockquote>
+<p><strong>9. Work against all forms of oppression.</strong></p>
+<blockquote>
+  <p>Violence against women, sexism, racism, heterosexism, and homophobia…all forms of oppression are linked. We cannot end one without challenging them all and know that every prejudice we hold injures others and limits our experience.</p>
+<em>What you can do:</em>  Challenge yourself to grow every day</blockquote>
+<p><strong>10. Create a new masculinity.</strong></p>
+<blockquote>
+  <p>Be brave enough to openly value equality. Use your strength and privilege in the service of justice. Live your potential without harming others. Celebrate the construction of a new masculinity that does not depend on the dehumanization of others. </p>
+  <p><em>What you can do:</em>  Find others who share your vision. You are not alone.</p>
+</blockquote>
+<p>Courtesy of <u>Men Can Stop Rape</u> (hyperlink to <a href="www.mencanstoprape.org">www.mencanstoprape.org</a>) </p>
+
+     	</div>
+    </div>    		
+</div>
+
+<div id="section410" class="tpad">
+    <div class="row">
+      <div class="ten columns offset-by-one" style="margin-bottom: 100px">     
+           <h2>Sexual Violence Resources</h2>
+
+<table>
+   <tr>
+    <td colspan=2><h3>Local</h3></td>
+ 
+  </tr>
+  <tr>
+    <td>Rape Victim   Advocates</td>
+    <td>312-443-9603</td>
+  </tr>
+  <tr>
+    <td>Between   Friends</td>
+    <td>773-274-5231</td>
+  </tr>
+  <tr>
+    <td>LifeSpan, legal &amp;   counseling</td>
+    <td>312-408-1210</td>
+  </tr>
+  <tr>
+    <td>Metropolitan Family Services-Midway   Center, counseling</td>
+    <td>773-884-3310</td>
+  </tr>
+  <tr>
+    <td>Rainbow House-Beverly-Morgan Park,   counseling</td>
+    <td>773-238-5411</td>
+  </tr>
+  <tr>
+    <td>Rainbow House-Little Village,   counseling</td>
+    <td>773-521-1815</td>
+  </tr>
+  <tr>
+    <td>Sarah&rsquo;s Inn-Oak Park,   counseling</td>
+    <td>708-386-4225</td>
+  </tr>
+  <tr>
+    <td>Center on Halsted (LGBTQ teens),   counseling</td>
+    <td>773-472-6643</td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td colspan=2><h3>National</h3></td>
+ 
+  </tr>
+  <tr>
+    <td>National Teen Dating Abuse   Helpline</td>
+    <td>1-866-331-9474</td>
+  </tr>
+  <tr>
+    <td>Gay and Lesbian Youth   Talkline</td>
+    <td>1-800-246-PRIDE (7743)</td>
+  </tr>
+  <tr>
+    <td>National Sexual Assault   Hotline</td>
+    <td>1-800-656-HOPE (4673)</td>
+  </tr>
+  <tr>
+    <td>National Runaway   Switchboard</td>
+    <td>1-800-621-4000</td>
+  </tr>
+  <tr>
+    <td>National Suicide   Hotline</td>
+    <td>1-800-784-2433</td>
+  </tr>
+  </table>
+<table>
+  <tr>
+    <td colspan=2><h3>Hotlines</h3></td>
+ 
+  </tr>
+  <tr>
+    <td>City of Chicago Domestic Violence Help   Line</td>
+    <td>1-877-863-6338, 1-877-863-6339 (TTY)</td>
+  </tr>
+  <tr>
+    <td>Chicago Rape Crisis   Hotline</td>
+    <td>1-888-293-2080</td>
+  </tr>
+  </table>
+<table>
+    <tr>
+    <td colspan=2><h3>Health Care Providers (with or without   adult&rsquo;s permission)</h3></td>
+ 
+  </tr>
+ 
+  <tr>
+    <td>Broadway Youth   Center</td>
+    <td>773-935-3151</td>
+  </tr>
+  <tr>
+    <td>Chicago Women&rsquo;s Health   Center</td>
+    <td>773-935-6126</td>
+  </tr>
+  <tr>
+    <td>Erie Teen Health   Center</td>
+    <td>773-907-2331</td>
+  </tr>
+  <tr>
+    <td>Planned   Parenthood</td>
+    <td>800-230-7526</td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td colspan=2><h3>Perpetrators of Domestic Violence</h3></td>
+  </tr>
+  <tr>
+    <td>Salvation Army Family Services, teen   perpetrators</td>
+    <td>773-275-6233</td>
+  </tr>
+  <tr>
+    <td>IL Dept. of Human Services, Partner Abuse   Prevention   Program</td>
+    <td>877-863-6338</td>
+  </tr>
+  </table>
+<table>
+  <tr>
+    <td colspan=2><h3>Perpetrators of Sexual Violence</h3></td>
+  </tr>
+  <tr>
+    <td>Center for Contextual Change, Groups for   Juvenile Sex Offenders   </td>
+    <td>847-676-4447 x. 300</td>
+  </tr>
+  <tr>
+    <td>One Hope   United</td>
+    <td>847-245-6500</td>
+  </tr>
+</table>
+<h3>Websites</h3>
+  <a href="http://www.scarleteen.com/">Scarleteen</a>                                    <br>
+  Sex education for the real world</p>
+<p><a href="http://www.teenadvice.org/">Teen Advice</a><br>
+Teens can write for advice and look at archives for information</p>
+<p><a href="http://nationalsave.org/">National Save</a><br>
+Students Against Violence Everywhere</p>
+<p><a href="http://www.breakthecycle.org/">Break the Cycle</a><br>
+Resources and information</p>
+<p><a href="http://girlsinc.org/">Girls Inc.</a>                  <br>
+Girls Incorporate National Resource Center</p>
+<p><a href="http://www.mencanstoprape.org/">Men Can Stop Rape</a><br>
+Encourage boys to become youth allies in stopping gender violence including dating violence and sexual assault. </p>
+<p><a href="http://www.loveisrespect.org/">Love is Respect</a>  <br>
+Resources for teens on healthy relationships and offers peer support chat. </p>
+<p><a href="http://www.glnh.org/index2.html">GLNH</a><br>
+Support for LGBTQ through peer support chat and offers resources and information.</p>
+<p><a href="http://www.icasa.org/home.aspx?PageID=500&">Illinois Coalition Against Sexual Assault (ICASA)</a><br>
+  Organization that includes 32 community-based sexual assault crisis centers working together to end sexual violence. 
+                  </p>
+
+     	</div>
+    </div>    		
+</div>
+
 <!-- TOP MENU -->
 <?php include("includes/footer.php"); ?>
 <!--  END MENU -->
-
-  <script src="javascripts/jquery.foundation.orbit.js"></script>
-
- 
-	<script>
-		  $('#featured').orbit({
-		  animation: 'fade',      // fade, horizontal-slide, vertical-slide, horizontal-push
-		  animationSpeed: 1100,                // how fast animtions are
-		  timer: true,                       // true or false to have the timer
-		  resetTimerOnClick: true,           // true resets the timer instead of pausing slideshow progress
-		  advanceSpeed: 4000,                 // if timer is enabled, time between transitions
-		  pauseOnHover: true,                // if you hover pauses the slider
-		  startClockOnMouseOut: true,        // if clock should start on MouseOut
-		  startClockOnMouseOutAfter: 1000,    // how long after MouseOut should the timer start again
-		  directionalNav: true,               // manual advancing directional navs
-		  captions: false,                    // do you want captions?
-		  captionAnimation: 'none',           // fade, slideOpen, none
-		  captionAnimationSpeed: 800,         // if so how quickly should they animate in
-		  bullets: false,                      // true or false to activate the bullet navigation
-		  bulletThumbs: false,                // thumbnails for the bullets
-
-		  afterSlideChange: function(){},     // empty function
-		  fluid: true                         // or set a aspect ratio for content slides (ex: '4x3')
-		});
-    </script> 
 
 </body>
 </html>
