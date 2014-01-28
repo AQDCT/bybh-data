@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="http://23.23.93.123/bybh/stylesheets/foundation.css">
         <link rel="stylesheet" href="http://23.23.93.123/bybh/stylesheets/app.css">
 
-        <link href="{{ asset('bundles/jordillonchcrudgenerator/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
@@ -15,36 +14,36 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         {% block javascripts %}
         <script src="http://codeorigin.jquery.com/jquery-2.0.3.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js"></script>
         {% endblock %}
     </head>
     <body>
-<div class="row">
-        <nav class="top-bar">
-              <ul>
-                    <!-- Title Area -->
-                    <li><a href="/bybh/index.php"><img class="hide-for-medium-down" src="/bybh/images/BeYouBeHealthy_logo_300.png" alt="Be You Be Healthy Logo"><img class="show-for-medium-down" src="/bybh/images/BeYouBeHealthy_logo.png" alt="Be You Be Healthy Logo"></a></li>
-                    <li class="toggle-topbar"><a href="#"></a></li>
-              </ul> 
-
-         <section>
-            <!-- Right Nav Section -->
-
-                <ul class="right">
-         
-                   <li class="social" style="list-style: none"><a href="http://www.facebook.com/sexloop" target="_blank"><i class="icon-facebook" style="font-color: white; font-size: 20px"> </i></a></li>
-           
-                    <li class="social" style="list-style: none"><a href="https://twitter.com/sexedloop" target="_blank"><i class="icon-twitter" style="font-color: white; font-size: 20px; padding-right: 10px"> </i></a></li>
-            
-                   <li class="social" style="list-style: none"><a href="http://www.sexedloop.com/feed" target="_blank"><i class="icon-rss" style="font-color: white; font-size: 20px; padding-right: 15px"> </i></a></li>
-          
-                </ul>
-         </section>
-    </nav>  
-
-  </div>
     <div class='row'>
-        <div class='span15 offset1'>{% block header %}{% endblock %}</div>
+        <div class='span15 offset1'>
+            {% block header %}
+                <nav class="top-bar">
+                          <ul>
+                                <!-- Title Area -->
+                                <li><a href="/bybh/index.php"><img class="hide-for-medium-down" src="/bybh/images/BeYouBeHealthy_logo_300.png" alt="Be You Be Healthy Logo"><img class="show-for-medium-down" src="/bybh/images/BeYouBeHealthy_logo.png" alt="Be You Be Healthy Logo"></a></li>
+                                <li class="toggle-topbar"><a href="#"></a></li>
+                          </ul> 
+
+                     <section>
+                        <!-- Right Nav Section -->
+
+                            <ul class="right">
+                     
+                               <li class="social" style="list-style: none"><a href="http://www.facebook.com/sexloop" target="_blank"><i class="icon-facebook" style="font-color: white; font-size: 20px"> </i></a></li>
+                       
+                                <li class="social" style="list-style: none"><a href="https://twitter.com/sexedloop" target="_blank"><i class="icon-twitter" style="font-color: white; font-size: 20px; padding-right: 10px"> </i></a></li>
+                        
+                               <li class="social" style="list-style: none"><a href="http://www.sexedloop.com/feed" target="_blank"><i class="icon-rss" style="font-color: white; font-size: 20px; padding-right: 15px"> </i></a></li>
+                      
+                            </ul>
+                     </section>
+                </nav> 
+            {% endblock %}
+        </div>
     </div>
     <div class='row'>
         <div class='span4 offset1 sidebar'>{% block sidebar %}{% endblock %}</div>
