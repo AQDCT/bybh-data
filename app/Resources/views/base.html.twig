@@ -21,7 +21,9 @@
     {{ include ('CDCChartBundle:Default:header.html.twig') }}
     </div>
     <div class='row'>
+        <div class='span15 offset1'>
         {% block header %}{% endblock %}
+        </div>
     </div>
     <div class='row'>
         <div class='span4 offset1 sidebar'>{% block sidebar %}{% endblock %}</div>
