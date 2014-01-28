@@ -3,13 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}{% endblock %} | Health Research - BeYouBeHealthy.org</title>
-        {% block stylesheets %}
-        <link rel="stylesheet" href="http://23.23.93.123/bybh/stylesheets/app.css">
+                <link rel="stylesheet" href="http://beyoubehealthy.org/stylesheets/app.css">
 
+        {% block stylesheets %}
         <link href="{{ asset('bundles/jordillonchcrudgenerator/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         {% block javascripts %}
@@ -18,7 +17,7 @@
         {% endblock %}
     </head>
     <body>
-    <div class='row'>
+    <div class='row' id='top'>
         {% block header %}
 
         <div class='span5 offset1'>
