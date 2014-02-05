@@ -7,6 +7,10 @@ h3{
   line-height: 1.2em;
 }
 
+.top-bar {
+  height: 25px;
+}
+
 .sidebar {
   color: #666;
 }

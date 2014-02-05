@@ -5,12 +5,12 @@
         <title>{% block title %}{% endblock %} | Health Research - BeYouBeHealthy.org</title>
 
         {% block stylesheets %}
-        <link href="{{ asset('bundles/jordillonchcrudgenerator/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         {% endblock %}
         <link rel="stylesheet" href="http://beyoubehealthy.org/stylesheets/app.css">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
         {% block javascripts %}
         <script src="http://codeorigin.jquery.com/jquery-2.0.3.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.js"></script>
