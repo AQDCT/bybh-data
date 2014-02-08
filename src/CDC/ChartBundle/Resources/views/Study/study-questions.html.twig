@@ -1,0 +1,13 @@
+<h3>Study Questions</h3>
+  {% set counter = 0 %}
+{% for item in questions %}
+     {% if counter == 0 %}
+	<strong>{{item.category.name}}</strong><ul>
+{% elseif counter != item.category.id %}
+	</ul><strong>{{item.category.name}}</strong><ul>
+{% endif %}
+
+	<li><a href='{{ path('singlequestion', {'id': item.id })}}{{selections}}'>{{ item.name }}</a></li>
+
+     {% set counter = item.category.id %}
+{% endfor %}

@@ -7,8 +7,9 @@
 
 {% block content %}
 
-This is Study content.
-
+{{ study.description | raw }}
+<p>Select topics from the menu above to view data for distinct years and geographies.</p>
+{{ include ('CDCChartBundle:Study:study-questions.html.twig', {'questions': questions}) }}
 
 {% endblock %}
 

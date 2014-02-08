@@ -23,7 +23,7 @@ class StudyController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $studies = $em->getRepository('CDCChartBundle:Study')->findBy(array(), array('name' => 'ASC'));
+        $studies = $em->getRepository('CDCChartBundle:Study')->findBy(array(), array('name' => 'DESC'));
        
         if (!$studies) {
             throw $this->createNotFoundException('Unable to find Study entity.');

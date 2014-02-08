@@ -1,9 +1,8 @@
 <div class="btn-group"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 Unintentional Injuries and Violence
 <span class="caret"></span></a>
-
-<ul class="dropdown-menu">
 {% set currentCategory = 1 %}
+<ul class="dropdown-menu">
 
 {% for item in questions %}
       {% if currentCategory != item.category.id %}
