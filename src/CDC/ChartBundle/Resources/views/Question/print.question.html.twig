@@ -1,8 +1,6 @@
-{% extends "::base.html.twig" %}
+{% extends "::print.html.twig" %}
 
 {% form_theme form _self %}
-
-
 
 {% block form_row %}
     <div class="form_row" style='margin: 5px; float: left; clear:none;'>
@@ -13,7 +11,7 @@
 {% endblock form_row %}
 
 {% block title %}{{ question.category.study.name }} - {{ question.name }}{% endblock %}
-
+{% block header %}
 <script>
 $(document).ready(function() {
 
@@ -38,20 +36,11 @@ $(document).ready(function() {
   
 });
 </script>
-
-
-{% block sidebar %}
-<h5>{{ question.category.study.name }}</h5>
-<h3>{{ question.name }}</h3><p class='lead'>{{ question.description }}
-<h4>Geographies</h4>
-{{ form(form, {'attr': {'class': 'form-inline'}}) }}
-<a href='' id='update_me'><button class="btn" type="button">Update</button></a>
-<a href='true' id='print_me'><button class="btn" type="button">Print</button></a>
-<hr/>
-<a href='{{ path('allstudies') }}'>Back to Study Home</a>
-{% endblock %}
+{% endblock header %}
 
 {% block content %}
+<h3>{{ question.category.study.name }} - {{ question.name }}</h3><p class='lead'>{{ question.description }}
+<hr/>
 
 <script src="{{ asset('js/chart.min.js') }}"></script>
 
