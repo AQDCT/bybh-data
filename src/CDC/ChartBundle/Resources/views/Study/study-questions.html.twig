@@ -1,5 +1,9 @@
+{% if questions %}
+<p>Select topics from the menu above to view data for distinct years and geographies.</p>
 <h3>Study Questions</h3>
-  {% set counter = 0 %}
+{% endif %}  
+
+{% set counter = 0 %}
 {% for item in questions %}
      {% if counter == 0 %}
 	<strong>{{item.category.name}}</strong><ul>
@@ -11,3 +15,4 @@
 
      {% set counter = item.category.id %}
 {% endfor %}
+

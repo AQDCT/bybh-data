@@ -14,7 +14,6 @@
 
 {% block title %}{{ question.category.study.name }} - {{ question.name }}{% endblock %}
 
-{% block header %} 
 <script>
 $(document).ready(function() {
 
@@ -36,29 +35,10 @@ $(document).ready(function() {
         }
         $("#update_me").attr("href", "{{ path('singlequestion', {'id': question.id}) }}" + route );
     });
-
-    $('#print_me').click(function(){
-        var route = '';
-        if($('#form_USA').is(':checked')){
-            route += '/USA';
-        }
-        if($('#form_Illinois').is(':checked')){
-            route += '/Illinois';
-        }
-        if($('#form_Chicago').is(':checked')){
-            route += '/Chicago';
-        }
-        if($('#form_New_York_City').is(':checked')){
-            route += '/New York City';
-        }
-        $("#print_me").attr("href", "{{ path('printsinglequestion', {'id': question.id}) }}" + route );
-    });
   
 });
 </script>
-{{ include ('CDCChartBundle:Default:button-menu.html.twig', {'selections': selections}) }}
 
-{% endblock %}
 
 {% block sidebar %}
 <h5>{{ question.category.study.name }}</h5>
@@ -66,7 +46,7 @@ $(document).ready(function() {
 <h4>Geographies</h4>
 {{ form(form, {'attr': {'class': 'form-inline'}}) }}
 <a href='' id='update_me'><button class="btn" type="button">Update</button></a>
-<a href='' id='print_me'><button class="btn" type="button">Print</button></a>
+<a href='true' id='print_me'><button class="btn" type="button">Print</button></a>
 <hr/>
 <a href='{{ path('allstudies') }}'>Back to Study Home</a>
 {% endblock %}

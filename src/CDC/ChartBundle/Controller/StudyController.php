@@ -15,7 +15,7 @@ class StudyController extends Controller
     /**
      * Display all studies in the system.
      *
-     * @Route("/studies", name="allstudies")
+     * @Route("/", name="allstudies")
      * @Method("GET")
      * @Template()
      */
