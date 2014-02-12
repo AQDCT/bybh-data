@@ -26,7 +26,10 @@
         </div>
     </div>
     <div class='row'>
-        <div class='span16 offset1' style='margin-right: 40px;'>{% block content %}{% endblock %}</div>
+        <div class='span4 offset1 sidebar'>{% block sidebar %}{% endblock %}</div>
+
+        <div class='span12'>{% block content %}{% endblock %}</div>
+
     </div>
 
     </body>

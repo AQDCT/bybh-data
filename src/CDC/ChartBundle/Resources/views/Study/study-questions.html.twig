@@ -1,6 +1,7 @@
 {% if questions %}
-<p>Select topics from the menu above to view data for distinct years and geographies.</p>
-<h3>Study Questions</h3>
+<h3>Study Topics</h3>
+{% else %}
+<p><em>Study data coming soon.</em></p>
 {% endif %}  
 
 {% set counter = 0 %}
@@ -15,4 +16,4 @@
 
      {% set counter = item.category.id %}
 {% endfor %}
-
+</ul>
