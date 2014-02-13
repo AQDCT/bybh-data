@@ -35,7 +35,6 @@ class QuestionController extends Controller
             ->setParameter('study', $thisStudy);
         
         $questions = $qb->getQuery()->getResult();
-	      $firstCategory = '5';
         $max = 0;
         $min = 100;
 
@@ -181,7 +180,7 @@ class QuestionController extends Controller
             return $this->redirect($this->generateUrl('singlequestion', array('id' => $thisQuestion->getId())));
         }
 
-        return $this->render('CDCChartBundle:Question:question.html.twig', array('question' => $thisQuestion, 'firstCategory' => $firstCategory, 'selections' => $selections, 'questions' => $questions, 'max' => $max, 'min' => $min, 'step' => $step, 'g1' => $g1, 'g1row' => $g1row, 'g2' => $g2, 'g2row' => $g2row, 'g3row' => $g3row, 'g4row' => $g4row, 'dataset' => $dataset, 'form' => $form->createView()));
+        return $this->render('CDCChartBundle:Question:question.html.twig', array('question' => $thisQuestion, 'selections' => $selections, 'questions' => $questions, 'max' => $max, 'min' => $min, 'step' => $step, 'g1' => $g1, 'g1row' => $g1row, 'g2' => $g2, 'g2row' => $g2row, 'g3row' => $g3row, 'g4row' => $g4row, 'dataset' => $dataset, 'form' => $form->createView()));
     }
 
     /**
