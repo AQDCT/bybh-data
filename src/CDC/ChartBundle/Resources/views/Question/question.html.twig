@@ -1,4 +1,4 @@
-{% extends "::leftsidebar.html.twig" %}
+{% extends "::base.html.twig" %}
 
 {% form_theme form _self %}
 
@@ -60,7 +60,8 @@ $(document).ready(function() {
 
 {% endblock %}
 
-{% block sidebar %}
+{% block content %}
+
 <h5>{{ question.category.study.name }}</h5>
 <h3>{{ question.name }}</h3><p class='lead'>{{ question.description }}
 <h4>Geographies</h4>
@@ -69,9 +70,7 @@ $(document).ready(function() {
 <a href='' target="_blank" id='print_me'><button class="btn" type="button">Print</button></a>
 <hr/>
 <a href='{{ path('allstudies') }}'>Back to Study Home</a>
-{% endblock %}
 
-{% block content %}
 {% if question.category.study.id == 1 %}
 {% set columns = '<th>1993</th><th>1995</th><th>1997</th><th>1999</th><th>2001</th><th>2003</th><th>2005</th><th>2007</th><th>2009</th><th>2011</th>' %}
 <script src="{{ asset('js/chart.min.js') }}"></script>
