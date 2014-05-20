@@ -26,6 +26,16 @@ h3 {
 .panel-default {
     padding-left: 0;
 }
+.span4 {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 33%;
+}
+.span8 {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 66%;
+}
 .span12 {
     padding-left: 5%;
     padding-right: 5%;
