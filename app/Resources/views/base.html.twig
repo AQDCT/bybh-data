@@ -33,16 +33,16 @@
  
 </script>
 <!-- END Analytics -->
-    <div class='row'>
-    {{ include ('CDCChartBundle:Default:header.html.twig') }}
-    </div>
+
     <div class='row'>
         <div class='span16 offset1'>
-        {% block header %}{% endblock %}
+        {% block header %}    
+            {{ include ('CDCChartBundle:Default:header.html.twig') }}
+        {% endblock %}
         </div>
     </div>
     <div class='row'>
-        <div class='span16 offset1' style='margin-right: 40px;'>{% block content %}{% endblock %}</div>
+        <div class='span16 offset1'>{% block content %}{% endblock %}</div>
     </div>
 
     </body>
