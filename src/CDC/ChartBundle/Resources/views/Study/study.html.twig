@@ -4,7 +4,6 @@
 {% block content %}
 
 <h1>{{ study.name }}</h1>
-{{ include ('CDCChartBundle:Default:button-menu.html.twig') }}
 {{ study.description | raw }}
 {{ include ('CDCChartBundle:Study:study-questions.html.twig', {'questions': questions}) }}
 
